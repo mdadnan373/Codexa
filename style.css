@@ -2,21 +2,27 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Inter;
+font-family:'Inter',sans-serif;
 }
 
 body{
 background:#0b0f19;
 color:white;
+line-height:1.6;
 }
+
+/* HEADER */
 
 header{
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:20px 8%;
 position:fixed;
 width:100%;
 background:#0b0f19;
+border-bottom:1px solid #1f2937;
+z-index:1000;
 }
 
 .logo{
@@ -29,25 +35,31 @@ nav a{
 margin-left:25px;
 text-decoration:none;
 color:white;
+font-size:14px;
+transition:0.3s;
 }
 
-section{
-padding:120px 8%;
-text-align:center;
+nav a:hover{
+color:#00d9ff;
 }
+
+/* HERO */
 
 .hero{
 height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
+text-align:center;
 position:relative;
 overflow:hidden;
+padding:0 20px;
 }
 
 .hero-content{
 position:relative;
 z-index:2;
+max-width:700px;
 }
 
 .hero h1{
@@ -59,7 +71,15 @@ margin-bottom:20px;
 color:#00d9ff;
 }
 
+.hero p{
+opacity:0.8;
+}
+
+/* BUTTON */
+
 .btn{
+display:inline-block;
+margin-top:25px;
 padding:12px 28px;
 background:#00d9ff;
 border:none;
@@ -67,14 +87,30 @@ border-radius:6px;
 color:black;
 font-weight:600;
 cursor:pointer;
+text-decoration:none;
 }
 
+/* SECTIONS */
+
+section{
+padding:120px 8%;
+text-align:center;
+}
+
+.section-title{
+font-size:32px;
+margin-bottom:50px;
+}
+
+/* GRID */
+
 .grid{
-margin-top:50px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
+
+/* CARDS */
 
 .card{
 background:#111827;
@@ -85,16 +121,34 @@ transition:0.3s;
 
 .card:hover{
 transform:translateY(-8px);
-box-shadow:0 0 20px #00d9ff44;
+box-shadow:0 0 20px rgba(0,217,255,0.3);
 }
+
+/* PORTFOLIO */
 
 .project{
 background:#111827;
 padding:50px;
 border-radius:10px;
+transition:0.3s;
 }
 
-form{
+.project:hover{
+transform:scale(1.05);
+background:#1f2937;
+}
+
+/* ABOUT */
+
+.about-text{
+max-width:700px;
+margin:auto;
+opacity:0.85;
+}
+
+/* CONTACT */
+
+.contact-form{
 max-width:500px;
 margin:auto;
 display:flex;
@@ -106,10 +160,26 @@ input,textarea{
 padding:12px;
 border:none;
 border-radius:6px;
+font-size:14px;
 }
 
+/* FOOTER */
+
 footer{
-padding:20px;
+padding:30px;
 text-align:center;
 background:#111827;
+font-size:14px;
+opacity:0.7;
+}
+
+/* CANVAS BACKGROUND */
+
+#bg{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:0;
 }
